@@ -3,11 +3,10 @@ import os
 from tkinter import Tk, Label, Button, Frame
 
 def countdown_and_shutdown():
-    # Удаляем все кнопки перед началом таймера
     for widget in frame.winfo_children():
         widget.destroy()
 
-    label.config(text="Самоуничтожение через 3...", font=("Arial", 40))
+    label.config(text="Самоуничтожение через 3...", font=("Chiller", 50), fg="red")
     root.update()
     time.sleep(1)
     
@@ -19,7 +18,7 @@ def countdown_and_shutdown():
     root.update()
     time.sleep(1)
     
-    os.system("shutdown /s /t 1")  # Выключение ПК
+    os.system("shutdown /s /t 1")
 
 def next_question(question_text, answers, command):
     global label
@@ -29,7 +28,7 @@ def next_question(question_text, answers, command):
         widget.destroy()
     
     for answer in answers:
-        Button(frame, text=answer, font=("Arial", 20), command=command).pack()
+        Button(frame, text=answer, font=("Chiller", 30), fg="red", bg="black", command=command).pack(pady=5)
 
 def question_3():
     next_question("Любишь школу?", ["Нет", "Нет"], countdown_and_shutdown)
@@ -38,21 +37,33 @@ def question_2():
     next_question("Скачивал когда-либо вирусы?", ["Да", "Да"], question_3)
 
 def start_quiz():
-    start_button.destroy()  # Удаляем кнопку "НАЧАТЬ"
+    global blinking
+    blinking = False  # Останавливаем моргание заголовка
+    start_button.destroy()
     next_question("СОСАЛ?", ["Да", "Да"], question_2)
 
-root = Tk()
-root.attributes("-fullscreen", True)  # Полный экран
-root.attributes("-topmost", True)  # Поверх всех окон
-root.protocol("WM_DELETE_WINDOW", lambda: None)  # Блокируем закрытие
+def blink_text():
+    if blinking:
+        label.config(fg="red" if label.cget("fg") == "black" else "black")
+        root.after(500, blink_text)
 
-label = Label(root, text="Нажми, чтобы начать", font=("Arial", 30))
+# Окно
+root = Tk()
+root.configure(bg="black")
+root.attributes("-fullscreen", True)
+root.attributes("-topmost", True)
+root.protocol("WM_DELETE_WINDOW", lambda: None)
+
+blinking = True
+label = Label(root, text="Нажми, чтобы начать", font=("Chiller", 50), fg="red", bg="black")
 label.pack(pady=50)
 
-frame = Frame(root)
+frame = Frame(root, bg="black")
 frame.pack()
 
-start_button = Button(root, text="НАЧАТЬ", font=("Arial", 25), command=start_quiz)
+start_button = Button(root, text="НАЧАТЬ", font=("Chiller", 40), fg="red", bg="black", command=start_quiz)
 start_button.pack(pady=20)
+
+blink_text()  # Запуск анимации моргания
 
 root.mainloop()
