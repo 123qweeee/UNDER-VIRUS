@@ -5,6 +5,7 @@ Under virus, trolling, pc offing, недо вирус, вырубает комп
 Важно!
 Есть детекты от антивирусов, скачивайте на свой страх и риск.
 недо вирус - ТОЛЬКО на русском
+Чтобы выйти из вируса, нажмите ctrl+shift+Q
 Что это?
 Это небольшой троллинг-опрос, который завершается отключением пк. Никаких вредоносных действий не выполняет.
 Как работает?
@@ -19,6 +20,7 @@ Under-Virus
 Warning!
 This program may be detected by some antivirus software. Download at your own risk.
 under-virus - ONLY in Russian
+How to get away from the virus? Press Ctrl+Shift+Q.
 What is this?
 This is a harmless trolling quiz that ends with a forced shutdown of the computer. It does not perform any malicious actions.
 How does it work?
