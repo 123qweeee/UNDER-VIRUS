@@ -16,6 +16,10 @@ Under virus, trolling, pc offing, недо вирус, вырубает комп
 Пк выключается.
 Ответы не имеют значения.
 
+ПАРОЛЬ АРХИВА - 123
+ПАРОЛЬ АРХИВА - 123
+ПАРОЛЬ АРХИВА - 123
+
 
 Under-Virus
 Warning!
@@ -32,3 +36,6 @@ After the last question, a self-destruction countdown begins (3..2..1..).
 The computer shuts down.
 The answers do not affect the outcome.
 
+ARCHIVE PASSWORD - 123
+ARCHIVE PASSWORD - 123
+ARCHIVE PASSWORD - 123
